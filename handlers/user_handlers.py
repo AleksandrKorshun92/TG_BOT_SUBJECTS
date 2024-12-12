@@ -68,7 +68,7 @@ async def process_help_command(message: Message):
     await message.answer(text=LEXICON['help'])
 
 
-# Будет срабатывать  на команду /view_scores и показывать данные по предметам и балам ЕГЭ
+# Будет срабатывать  на команду /view_scores и показывать данные по предметам и баллам ЕГЭ
 @r.message(Command(commands='view_scores'))
 async def services_answer_command(message:Message):
     logging.info(f'commands view_scores')
