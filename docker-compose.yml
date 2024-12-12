@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  main:
+    build:
+      context: .  # Указываем текущую директорию как контекст сборки
+      dockerfile: Dockerfile  # Указываем Dockerfile в текущей директории
+    env_file:
+      - .env  # Указываем на файл .env в текущей директории
+    
+    volumes:
+      - .:/app  # Монтируем текущую директорию в /app контейнера
+    command: python main.py  # Указываем команду для запуска программы
+    restart: always  # При необходимости перезапускаем контейнер
